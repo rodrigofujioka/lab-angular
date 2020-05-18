@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { ContadorComponent } from './contador/contador.component';
+import { ExibeImagemComponent } from './exibe-imagem/exibe-imagem.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RodapeComponent,
-    ContadorComponent
+    ContadorComponent,
+    ExibeImagemComponent
   ],
   imports: [
     BrowserModule,
