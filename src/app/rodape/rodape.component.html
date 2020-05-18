@@ -1,15 +1,20 @@
 
     <b> {{headerFooter}} ? </b>&nbsp;
 
-    <a [href]="githubUrl" target="_blank" rel="noopener"> Acessar repositório.
-      <div class="github-star-badge">
-          <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>      
-      </div>
-    </a>
- 
-    <img class="img-thumbnail" [src]="imgSimbling" [alt]="altText">
+    <div class="card">
+      <img class="img-thumbnail" [src]="imgUrl" [alt]="altText">
+      <div class="card-body">
+        <h4 class="card-title">Rodrigo Fujioka</h4>
+        <p class="card-text">1° TDC Recife com prof Rodrigo Fujioka Coordenando Trilha de Java</p>
+        <a href="https://thedevconf.com/tdc/2019/recife/trilha-java" target="_blank" class="btn btn-success">TDC</a>           
+        &nbsp;&nbsp;
+        <a [href]="githubUrl" target="_blank" class="btn btn-dark">GitHub</a> 
+        <app-contador></app-contador>            
+      </div>   
+    </div>
 
-    <app-contador></app-contador>
+
+
 
 
 
