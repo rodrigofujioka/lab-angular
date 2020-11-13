@@ -1,0 +1,37 @@
+ 
+<div class="container">
+
+    <h2>Perfil Usuário</h2>
+    <p>Foto do usuário : {{usuario}}</p>
+    <div class="card" style="width:400px">
+      
+      <div *ngIf="exibe"> <!-- INICIO DIV-->
+
+        <img  [src]="imgPerfil"  class="card-img-top" alt="Perfil" style="width:100%" />
+          <p></p>
+        <div *ngFor="let certification of lista">
+
+          <div *ngIf="certification.year > 2010" class="alert alert-primary" role="alert">
+           
+              {{certification.cert}}
+            </div>
+            <div *ngIf="certification.year < 2010" class="alert alert-danger" role="alert">
+           
+              {{certification.cert}}
+            </div>
+        </div>
+
+      </div>      <!-- FIM DIV-->
+
+      <div class="card-body">
+        <h4 class="card-title">Rodrigo Fujioka</h4>
+        <p class="card-text">Professor de programação avançada</p>
+
+  
+        <button type="button" class="btn btn-primary" (click)="exibePerfil()">Exibe Perfil</button>
+      </div>
+    </div>
+    
+    <br>
+  
+  </div>

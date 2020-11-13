@@ -1,0 +1,17 @@
+<form [formGroup]="formularioCadastro" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="name">Name:</label>
+        <input id="name" name="name" type="text" formControlName="name">
+    </div>
+    <div>
+        <label for="phone">Phone:</label>
+        <input id="phone" name="phone" type="tel" formControlName="phone">
+    </div>
+    <div>
+        <label for="document">Document:</label>
+        <input id="document" name="document" type="texto" formControlName="document">
+    </div>
+    <div>
+        <button type="submit" [disabled]="formularioCadastro.invalid">Gravar</button>
+    </div>
+</form>

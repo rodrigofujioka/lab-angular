@@ -1,0 +1,14 @@
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+
+    <div>
+        <label for="nome">Nome:</label>
+        <input  id="nome" name="nome" ngModel type="text" required/>
+    </div>
+
+    <div>
+        <label for="idade">Idade:</label>
+        <input id="idade" name="idade" ngModel type="number" required>
+    </div>
+
+    <button type="submit" [disabled]="f.form.invalid">Cadastrar</button>
+</form>

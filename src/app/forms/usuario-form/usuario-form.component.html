@@ -1,0 +1,116 @@
+
+<div class="container">
+    <h2>Fading Modal</h2>
+    <p>Add the "fade" class to the modal container if you want the modal to fade in on open and fade out on close.</p>
+  
+    <!-- Button to Open the Modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+      Open modal
+    </button>
+  
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Modal Heading</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+            Modal body..
+          </div>
+          
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+
+
+<div class="container">
+
+    <form [formGroup]="formUsuario" (ngSubmit)="onSubmit()" class="was-validated">
+       
+        <div class="form-group input-group-sm">
+            
+            <label for="nome">Nome: </label>
+            <input type="text" class="form-control" formControlName="nome">
+            
+                <div *ngIf="!nome.errors" class="valid-feedback">ok.</div>     
+                <div *ngIf="!nome.pristine && nome.errors" class="alert alert-danger">                              
+                    <span *ngIf="nome.errors.required" > Nome é obrigatório.</span>
+                    <span *ngIf="nome.errors.minlength" > Nome deve ter no mínimo 5 caracters.</span>
+                    <span *ngIf="nome.errors.maxlength" > Nome deve ter no máximo 150 caracters.</span>                 
+                </div>
+        </div>
+    
+        <div class="input-group mb-3 input-group-sm" >
+            <div class="input-group-prepend">
+                <span class="input-group-text input-group-sm">@</span>
+              </div>
+            <input class="form-control"  type="text" formControlName="email">
+                <div *ngIf="!email.pristine && email.errors" class="alert alert-danger">
+                    <span *ngIf="email.errors.email">Digite um e-mail válido.</span>
+                </div>
+        </div>
+    
+        <div class="form-group input-group-sm">
+            <label for="cpf">CPF: </label>
+            <input type="text" formControlName="cpf">
+                <div *ngIf="!cpf.pristine && cpf.errors" class="alert alert-danger">
+                    <span  *ngIf="cpf.errors.required">CPF é obrigatório.</span>
+                    <span  *ngIf="cpf.errors.cpfInvalido">Digite um CPF válido</span>
+                </div>
+        </div>
+    
+        <div class="form-group input-group-sm">
+            <label for="nascimento">Nascimento: </label>
+            <input type="date" formControlName="nascimento">
+                <div *ngIf="!nascimento.pristine && nascimento.errors" class="alert alert-danger">
+                    <span *ngIf="nascimento.errors.required"> Data de Nascimento é obrigatória.</span>
+                    <span *ngIf="nascimento.errors.menorDeIdade"> Você precisa ter mais de 18 anos para cadastrar-se.</span>
+                </div>
+        </div>
+    
+        <div class="form-group input-group-sm">
+            <label for="senha">Senha: </label>
+            <input type="password" formControlName="senha" class="alert alert-danger">
+                <div *ngIf="!senha.pristine && senha.errors">
+                    <span *ngIf="senha.errors.required"> Senha é obrigatória.</span>
+                    <span *ngIf="senha.errors.minlength"> Senha deve ter no mínimo 6 caracters.</span>
+                    <span *ngIf="senha.errors.maxlength"> Senha deve ter no máximo 12 caracters. </span>
+                </div>
+        </div>
+    
+        <div class="form-group input-group-sm">
+            <label for="confirmarSenha">Confirmar Senha: </label>
+            <input type="password" formControlName="confirmarSenha">
+            <div *ngIf="!confirmarSenha.pristine && confirmarSenha.errors" >       
+                <span *ngIf="confirmarSenha.errors.required"> Confirme sua senha.</span>
+                <span *ngIf="confirmarSenha.errors.senhasNaoCoincidem">As senhas não coincidem. </span>
+            </div>
+        </div>
+    
+        <br>
+        <div>
+        <button [disabled]="!formUsuario.valid">Enviar dados</button>
+        </div>
+    
+        <br>
+        <br>
+    
+        <div>{{ formUsuario.value | json}}</div>
+        <div>{{ formUsuario.valid | json }}</div>
+    </form>
+
+  </div>

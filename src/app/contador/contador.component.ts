@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ContadorComponent implements OnInit {
 
   public contador = 0;
-  @Input() value = 'Texto passado' ;
+  public imgUrl = 'https://www.fujideia.com.br/fuji/papw/grupo_handsome_siblings_20022020.png';
 
   constructor() { }
 

@@ -1,0 +1,32 @@
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div>
+       <label for="firstname">Firstname:</label>
+       <input id="firstname" name="firstname" ngModel type="text" required>
+    </div>
+    <div>
+      <label for="lastName">LastName:</label>
+      <input id="lastName" name="lastName" ngModel type="text" required>
+   </div>
+    <div>
+       <label for="phone">Phone:</label>
+       <input id="phone" name="phone" ngModel type="tel" required>
+    </div>
+    <div>
+       <label for="cpf">CPF:</label>
+       <input id="cpf" name="cpf" ngModel type="texto" required>
+    </div>
+    <div>
+        <label for="login">Login:</label>
+        <input id="login" name="login" ngModel type="texto" required>
+     </div>
+     <div>
+      <label for="pass">password:</label>
+      <input id="pass" name="pass" ngModel type="password" required>
+   </div>
+    <div>
+       <button type="submit" [disabled]="f.form.invalid">Gravar</button>
+    </div>
+ </form>
+
+
+ 
