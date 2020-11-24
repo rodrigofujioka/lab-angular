@@ -1,0 +1,19 @@
+{
+  "contact": [
+    {
+      "id": 1,
+      "name": "Rodrigo-server",
+      "accountNumber": "typicode"
+    },
+    {
+      "name": "asda",
+      "accountNumber": "asdasd",
+      "id": 2
+    },
+    {
+      "name": "Rodrigo",
+      "accountNumber": "Fujioka",
+      "id": 3
+    }
+  ]
+}

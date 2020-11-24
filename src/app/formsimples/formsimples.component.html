@@ -1,14 +1,17 @@
-<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+<form (ngSubmit)="saveContato(f)" #f="ngForm">
 
     <div>
-        <label for="nome">Nome:</label>
-        <input  id="nome" name="nome" ngModel type="text" required/>
-    </div>
+        <label for="name">Name:</label>
+        <input type="text" [(ngModel)]="contato.name" id="name" name="name" #name="ngModel" required class="form-control"  
+        placeholder="Digite a Nome"  [ngClass]="{ 'is-invalid': f.submitted && name.invalid }" >
 
+    </div>
     <div>
-        <label for="idade">Idade:</label>
-        <input id="idade" name="idade" ngModel type="number" required>
+        <label for="accountNumber">AccountNumber:</label>
+        <input type="text" [(ngModel)]="contato.accountNumber" id="accountNumber" name="accountNumber" #accountNumber="ngModel" required class="form-control"  >
+       
     </div>
-
-    <button type="submit" [disabled]="f.form.invalid">Cadastrar</button>
+    <div>
+        <button type="submit" [disabled]="f.form.invalid">Cadastrar</button>
+    </div>
 </form>

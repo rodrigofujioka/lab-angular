@@ -15,9 +15,15 @@ export class ContadorComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  contarClique(){
+  incremento(){
     this.contador = this.contador + 1;
     //this.contador++;
   }
+
+  decremento(){
+    this.contador = this.contador - 1;
+    //this.contador++;
+  }
+
 
 }

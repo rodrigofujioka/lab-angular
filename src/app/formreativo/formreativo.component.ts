@@ -15,7 +15,7 @@ export class FormreativoComponent implements OnInit {
     
   this.formularioCadastro = new FormGroup({
     'name': new FormControl(null, Validators.required), 
-    'phone': new FormControl(null, Validators.required),
+    'phone': new FormControl(null, Validators.required ),
     'document': new FormControl(null, Validators.required)});  
   }
  

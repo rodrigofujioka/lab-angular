@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule} from '@angular/forms' 
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { RodapeComponent } from './rodape/rodape.component';
@@ -16,6 +17,7 @@ import { ReactReactiveFormsComponent } from './forms/react-reactive-forms/react-
 import { UsuarioFormComponent } from './forms/usuario-form/usuario-form.component';
 import { FormsimplesComponent } from './formsimples/formsimples.component';
 import { FormreativoComponent } from './formreativo/formreativo.component';
+import { FormreativoListaComponent } from './formreativo-lista/formreativo-lista.component';
 
 
 @NgModule({
@@ -31,12 +33,14 @@ import { FormreativoComponent } from './formreativo/formreativo.component';
     UsuarioFormComponent,
     FormsimplesComponent,
     FormreativoComponent,
+    FormreativoListaComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

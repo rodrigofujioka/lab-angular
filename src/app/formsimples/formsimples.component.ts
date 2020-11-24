@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Contato } from '../contato';
+import { FormService } from '../form.service';
 
 @Component({
   selector: 'app-formsimples',
@@ -8,7 +10,9 @@ import { NgForm } from '@angular/forms';
 })
 export class FormsimplesComponent implements OnInit {
 
-  constructor() { }
+  contato = {} as Contato;
+  
+  constructor(private formService: FormService) { }
 
   ngOnInit(): void {
   }
@@ -21,5 +25,20 @@ export class FormsimplesComponent implements OnInit {
 
     console.log(dados);
   }
+
+  // defini se um usuário será criado ou atualizado
+  saveContato(form: NgForm) {    
+    console.log(this.contato);
+    this.formService.saveContato(this.contato).subscribe(() => {
+      this.cleanForm(form);
+    });
+  
+  }
+
+    // limpa o formulario
+    cleanForm(form: NgForm) {  
+      form.resetForm();
+      this.contato = {} as Contato;      
+    }
 
 }
