@@ -63,7 +63,8 @@ Se no comando `ng serve --open` o nevegador padrão será aberto automaticamente
  -- upstream        https://github.com/professorfujioka/lab-angular.git (push)
  ***
 
-
+## Executando uma API fake 
+Run  `json-server --watch src/assets/data/db.json` for fake api server.  
 
 ## Geração de componentes 
 
