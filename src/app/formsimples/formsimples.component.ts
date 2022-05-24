@@ -26,7 +26,6 @@ export class FormsimplesComponent implements OnInit {
     console.log(dados);
   }
 
-  // defini se um usuário será criado ou atualizado
   saveContato(form: NgForm) {    
     console.log(this.contato);
     this.formService.saveContato(this.contato).subscribe(() => {

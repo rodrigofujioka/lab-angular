@@ -18,6 +18,7 @@ import { UsuarioFormComponent } from './forms/usuario-form/usuario-form.componen
 import { FormsimplesComponent } from './formsimples/formsimples.component';
 import { FormreativoComponent } from './formreativo/formreativo.component';
 import { FormreativoListaComponent } from './formreativo-lista/formreativo-lista.component';
+import { FormcontatoComponent } from './formcontato/formcontato.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { FormreativoListaComponent } from './formreativo-lista/formreativo-lista
     FormsimplesComponent,
     FormreativoComponent,
     FormreativoListaComponent,
+    FormcontatoComponent,
   ],
   imports: [
     BrowserModule,
